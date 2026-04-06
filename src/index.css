@@ -1,0 +1,271 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+
+@import "tailwindcss";
+
+
+@layer utilities {
+
+  
+  .bg-flame-orange {
+    background-image: linear-gradient(
+      90deg,
+      hsla(16, 84%, 55%, 1) 54%,
+      hsla(37, 65%, 85%, 1) 100%,
+      hsla(301, 65%, 83%, 1) 100%
+    );
+  }
+
+
+  .font-exo {
+    font-family: "Exo", sans-serif;
+  }
+
+ .glow-line {
+    height: 3px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 3px;
+  }
+
+  @keyframes softGlowFade {
+    0% {
+      opacity: 0.6;
+      box-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+    }
+    50% {
+      opacity: 1;
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+    }
+    100% {
+      opacity: 0.6;
+      box-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+    }
+  }
+
+  .animate-softGlowFade {
+    animation: softGlowFade 3s ease-in-out infinite;
+  }
+
+}
+
+.background-image{
+  background-image: url('../src/assets/description-bg-new.jpg');
+  
+}
+
+.news-img{
+   background-image: url("../src/assets/news-bg.jpg");
+   background-size: cover;
+   height: 100%;
+   width: 100%;
+  
+}
+.news-banner{
+  background-image: url('../src/assets/news-banner.jpg');
+   /* background-size: cover;
+    width: 100%; 
+   height: max-content; */
+   /* height: 100%;
+   width: 100%s; */
+}
+
+.player-bg{
+  background-image: url("../src/assets/player-page-banner-bg.jpg");
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.5) skewX(12deg);
+  }
+  50% {
+    transform: scale(1.2) skewX(12deg);
+  }
+  100% {
+    transform: scale(1) skewX(12deg);
+  }
+}
+
+.popIn {
+  animation: poP 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+
+
+@keyframes ani {
+  0% {
+    
+    transform: scale(0.8) 
+  }
+  50% {
+    
+    transform: scale(1.1) 
+  }
+  100% {
+    
+    transform: scale(1) 
+  }
+}
+
+.anime {
+  animation: ani 0.7s ease-out forwards;
+}
+
+@keyframes left {
+  0% {
+    
+    transform: translateX(-10) 
+  }
+  50% {
+    
+   transform: translateX(-5)
+  }
+  100% {
+    
+    transform: translateX(0)
+  }
+}
+
+@keyframes slideFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.animate-slide-in-left {
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 1s ease-out forwards;
+}
+
+.animate-pop {
+  animation: pop 0.5s ease-out forwards;
+}
+
+
+.animation-delay-100 {
+  animation-delay: 0.1s;
+  opacity: 0;
+}
+
+.animation-delay-200 {
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+.animation-delay-300 {
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+.animation-delay-400 {
+  animation-delay: 0.4s;
+  opacity: 0;
+}
+.slide-top {
+  animation: slideFromTop 0.9s ease-out forwards;
+}
+
+.slide-bottom {
+  animation: slideFromBottom 0.9s ease-out forwards;
+}
+
+
+.lrft-ani {
+  animation: left 0.5s ease-out forwards;
+}
+
+
+.paltan-img1{
+  background-image: url("../src/assets/paltan-world-img1.png");
+  background-size: cover;
+  object-fit: cover;
+}
+
+.paltan-img2{
+  background-image: url('../src/assets/paltan-world-img2.png');
+  background-size: cover;
+  object-fit: cover;
+}
+
+.paltan-img3{
+  background-image: url('../src/assets/paltan-world-img3.png');
+  background-size: cover;
+  object-fit: cover;
+}
+
+.puneri-tv-bg{
+  background-image: url("../src/assets/platan-banner-1.jpg");
+  background-size: cover;
+}
+
+.puneri-gallery-bg{
+  background-image: url("../src/assets/gallery-bann.jpg");
+  background-size: cover;
+}
+.player-page-img{
+  background-image: url('../src/assets/player-page-banner-bg.jpg');
+}
+
+
+
+
+
